@@ -7,7 +7,7 @@ load_dotenv()
 
 class CheckForWork:
 	def __init__(self): 
-		self.url: str = "https://webwork.bucknell.edu/webwork2/25SPMA202-03-04"
+		self.url: str = os.environ.get("URL")
 		self.username: str = os.environ.get("USERNAME")
 		self.password: str = os.environ.get("PASSWORD") 
 		if self.username is None or self.password is None: 
